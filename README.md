@@ -1,5 +1,9 @@
 # Redes Neurais
 
+
+// ESCREVER UMA INTRODUÇÃO PRA QM EH NOOB E NAO MANJA
+
+
 Refatorando um código de JS, cheio de `this`, que veio do C para módulos em Node.js, por exemplo essa função:
 
 ```js
