@@ -116,5 +116,42 @@ module.exports = (amountWeights, defaultValue=Math.random()) =>
   Array.from({ length: amountWeights }, () => defaultValue)
 ```
 
+OK! Agora temos como criar nossos neurônios, mas e aí eles vão para onde??
 
+
+Como existem **vários** tipos de Redes Neurais irei abordar o tipo [autoencoder](https://en.wikipedia.org/wiki/Autoencoder) que é composta de pelo menos 3 camadas:
+
+- input/entrada
+- hidden/intermediária (Fica melhor q escondida em português)
+- output/saída
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/28/Autoencoder_structure.png)
+
+
+Então antes de sabermos como essas camadas funcionam precisamos ver como criá-las, conseguimos ver isso nessa parte do código original:
+
+```js
+function SNeuronLayer(NumNeurons, NumInputsPerNeuron){
+    
+    this.m_NumNeurons = NumNeurons;
+    this.m_vecNeurons = [];
+    
+    for(var i = 0; i < NumNeurons; i++){
+        this.m_vecNeurons.push(new SNeuron(NumInputsPerNeuron));
+    }
+    
+}
+```
+
+Analisando-a temos:
+
+- entra `NumNeurons` e `NumInputsPerNeuron`
+- define `this.m_NumNeurons` como `NumNeurons`
+- define `this.m_vecNeurons` como um *array* vazio
+- iteramos de 0 até `NumNeurons`
+    + adicionando ao *array* `this.m_vecNeurons` a cada iteração
+    + um novo neurônio. // new SNeuron(NumInputsPerNeuron)
+
+
+> **Ainda não se perguntou onde estão a porra dos `return`s dessas funções?** Pois pergunte-se! :p
 
