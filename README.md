@@ -54,21 +54,23 @@ Pois então pense aqui comigo...
 
 O elemento básico de uma rede neural são os neurônios, pois são eles que fazem a conexão entre os dados, assim como no nosso cérebro, correto?
 
-Sabendo disso podemos deduzir que eles são nossos [átomos](), beleza?!
+Sabendo disso podemos deduzir que eles são nossos [átomos](https://pt.wikipedia.org/wiki/%C3%81tomo), beleza?!
 
 Porém dentro das Redes Neurais cada neurônio possui pesos que serão usados para calcular sua saída, não vamos entrar nos detalhes técnicos agora, vamos nos ater ao conceito do Atomic Design.
 
 Se o neurônio é nosso átomo e possui 1 ou mais pesos "dentro dele", esses pesos são o quê?
 
 
-![quarks]()
+![quarks](https://raw.githubusercontent.com/suissa/estudos-sobre-inteligencia-artificial/master/assets/images/quarks.jpg)
 
 
-Caso você não conheça a image acima ela representa os [Quarks]() conhecidos pela Física Quântica atualmente...
+Caso você não conheça a imagem acima, ela representa os [Quarks](https://pt.wikipedia.org/wiki/Quark) conhecidos pela Física Quântica atualmente...
 
 > O quark, na física de partículas, é uma partícula elementar e um dos dois elementos básicos que constituem a matéria (o outro é o lépton). Quarks se combinam para formar partículas compostas chamadas hádrons; os mais estáveis desse tipo são os prótons e os nêutrons, que são os principais componentes dos núcleos atômicos[1]. Devido a um fenômeno conhecido como confinamento, quarks nunca são diretamente observados ou encontrados isoladamente; 
 
 *fonte: [https://pt.wikipedia.org/wiki/Quark](https://pt.wikipedia.org/wiki/Quark)*
+
+ps: caso você queira ver o uso de [Hadrons, confira meu Atomic Design no backend com Node.js](https://github.com/Webschool-io/Node-Atomic-Design-Modelo-Padrao#hádrons)
 
 Ligando uma coisa na outra podemos afirmar que esses pesos são os quarks, pois seu agrupamento que "forma" o átomo/neurônio.
 
