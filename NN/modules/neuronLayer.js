@@ -1,5 +1,5 @@
-const SNeuron = require('./neuron.js')
+const Neuron = require('./neuron.js')
 
-module.exports = (NumNeurons, NumInputsPerNeuron) => 
-  Array.from({length: NumNeurons}, () => SNeuron(NumInputsPerNeuron))
+module.exports = (amountNeurons, amountWeight) => 
+  Array.from({length: amountNeurons}, () => Neuron(amountWeight))
   

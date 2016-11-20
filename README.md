@@ -36,6 +36,8 @@ const Mutate = (chromo) => chromo.map((e, i) => (RandFloat() < 0.3)
 module.exports = Mutate
 ```
 
+Logo mais veremos o que é essa função.
+
 ## Metodologia de Estudo
 
 Como vocês já devem saber que sou meio louco por isso gosto de testar formas diferentes de aprender, eu já conhecia todo o conceito sobre [Redes Neurais]() mas nunca tinha feito nada com ela muito menos programado uma. Entretanto hoje, no meu aniversário 20/11, um broder meu e que provavelmente fará um curso sobre [Machine Learning]() na [Webschool.io]() próximo ano, pediu-me que o ajudasse a refatorar um pouco seu código pois ele está mais acostumado com C/C++ e claro eu fui com a maior sede ao pote.
@@ -160,4 +162,16 @@ Analisando-a temos:
 
 
 > **Ainda não se perguntou onde estão a porra dos `return`s dessas funções?** Pois pergunte-se! :p
+
+
+Agora vamos modularizar a função acima, renomeando seus parâmetros pois `NumInputsPerNeuron` na verdade significa a quantidade de pesos do neurônio a ser criado nessa camada.
+
+```js
+const Neuron = require('./neuron.js')
+
+module.exports = (amountNeurons, amountWeight) => 
+  Array.from({length: amountNeurons}, () => Neuron(amountWeight))
+```
+
+
 
