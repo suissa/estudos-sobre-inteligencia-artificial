@@ -78,6 +78,7 @@ Ligando uma coisa na outra podemos afirmar que esses pesos são os quarks, pois 
 > 
 > Mas então porque comecei falando disso?
 
+## Neurônio
 
 Comecei por elas pois são os menores elementos que temos na Rede Neural e foi a primeira função que vi [aqui](https://github.com/suissa/estudos-sobre-inteligencia-artificial/blob/master/NN/CNeuralNet.js):
 
@@ -118,6 +119,7 @@ module.exports = (amountWeights, defaultValue=Math.random()) =>
 
 OK! Agora temos como criar nossos neurônios, mas e aí eles vão para onde??
 
+## Camadas
 
 Como existem **vários** tipos de Redes Neurais irei abordar o tipo [autoencoder](https://en.wikipedia.org/wiki/Autoencoder) que é composta de pelo menos 3 camadas:
 
