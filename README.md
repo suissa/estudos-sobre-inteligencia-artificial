@@ -72,8 +72,47 @@ Caso você não conheça a image acima ela representa os [Quarks]() conhecidos p
 
 Ligando uma coisa na outra podemos afirmar que esses pesos são os quarks, pois seu agrupamento que "forma" o átomo/neurônio.
 
-> Até aí nada de novo, né?
+> Até aí nada de novo, né? 
+> 
+> Mas então porque comecei falando disso?
 
+
+Comecei por elas pois são os menores elementos que temos na Rede Neural e foi a primeira função que vi [aqui](https://github.com/suissa/estudos-sobre-inteligencia-artificial/blob/master/NN/CNeuralNet.js):
+
+```js
+function SNeuron(NumInputs){
+    
+    this.m_NumInputs = NumInputs + 1;
+    this.m_vecWeight = [];
+    
+    //we need an additional weight for the bias hence the +1
+    for (let i = 0; i < NumInputs + 1; ++i) {
+        //set up the weights with an initial random value
+        this.m_vecWeight[i] = 0.0;
+    }
+}
+```
+
+Como você deve ter visto no código original ele é cheiooooooo de `this` e como você sabe o `this` no JavaScript tem o valor de onde é chamado e não criado, mas beleza!
+
+Então fui analisar ela antes de refatorar:
+
+- entra NumInputs, número de inputs? 
+- crio m_vecWeight como array vazio
+- popula o array, do tamanho de NumInputs com 0.0
+
+Porém antes de refatorar eu fui tirar algumas dúvidas com o nosso professor de IA da Webschool e perguntei se NumInputs era o número de entradas da Rede Neural e ele me disse que não, que na verdade **é a quantidade de pesos do neurônio!** Fora isso ainda me disse que os pesos **não podem ser 0!**
+
+Pensei:
+
+> POORRRA! Pq não faz o esquema do jeito então?
+
+A primeira coisa que fiz foi modularizar essa função mudando `NumInputs` para `amountWeights` e colocar um valor padrão como randômico:
+
+```js
+module.exports = (amountWeights, defaultValue=Math.random()) => 
+  Array.from({ length: amountWeights }, () => defaultValue)
+```
 
 
 
