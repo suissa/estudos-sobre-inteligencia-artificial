@@ -8,16 +8,22 @@
 ![cérebrooooo](https://raw.githubusercontent.com/suissa/estudos-sobre-inteligencia-artificial/master/assets/images/brain1.jpg)
 
 
-> **PERFEITO!** Agora imagine tentar emular ele em um computador!!!
+> **PERFEITO!** 
+> 
+> Agora imagine tentar emular ele em um computador!!!
 
 
 
 ![daaannnn](http://i.giphy.com/GAgI0RcNxTOmI.gif)
 
 
-Pois é! Isso não só é possível como já descobriu diversas coisas que os cientistas ainda não conheciam, se te falarem que isso é o futuro eles estão errados.
+> **Pois é!**
+> 
+> Aproveitando-se desse poder de aprendizagem já foram descobertas diversas coisas/paradas/fitas que os cientistas ainda não conheciam, **se te falarem que isso é o futuro eles estão errados!**
 
-> Isso não é apenas nosso futuro como também o presente e **EU, Suissa,** tenho certeza que terá um impacto massivo na nossa vida.
+> **Isso não é apenas nosso futuro como também o presente e **EU, Suissa,** tenho certeza que terá um impacto GIGANTESCO na nossa vida.**
+
+Posso falar apenas nos trabalhos que tenho que posso implementar facilmente esse aprendizado de máquina, um exemplo claríssimo é em cima de BOTS que interagem com os usuários. Eu e meu aluno, [Rogério Munhoz](https://github.com/rjmunhoz), criamos um [BOT para Telegram](https://github.com/Webschool-io/Bot-Telegram-BeMEAN) focado em JS e para aprender, o qual já executa as mesmas funções para o Facebook também, a única coisa que realmente falta é um sistema de *Machine Learning* para fazermos com que esse [BOT](https://github.com/Webschool-io/Bot-Telegram-BeMEAN) interaja mais naturalmente e ainda aprenda com isso.
 
 
 Eu poderia escrever 1 artigo apenas com as últimas descobertas feitas a partir de Redes Neurais, mas em vez disso deixarei alguns links abaixo:
