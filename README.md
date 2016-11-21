@@ -36,7 +36,7 @@ Eu poderia escrever 1 artigo apenas com as últimas descobertas feitas a partir 
 
 ## Metodologia de Estudo
 
-Como vocês já devem saber que sou meio louco por isso gosto de testar formas diferentes de aprender, eu já conhecia todo o conceito sobre [Redes Neurais]() mas nunca tinha feito nada com ela muito menos programado uma. Entretanto hoje, no meu aniversário 20/11, um broder meu e que provavelmente fará um curso sobre [Machine Learning]() na [Webschool.io]() próximo ano, pediu-me que o ajudasse a refatorar um pouco seu código pois ele está mais acostumado com C/C++ e claro eu fui com a maior sede ao pote.
+Como vocês já devem saber que sou meio louco por isso gosto de testar formas diferentes de aprender, eu já conhecia todo o conceito sobre [Redes Neurais]() mas nunca tinha feito nada com ela muito menos programado uma. Entretanto hoje, no meu aniversário 20/11, um broder meu e que provavelmente fará um curso sobre [Machine Learning](https://en.wikipedia.org/wiki/Machine_learning) na [Webschool.io](http://webschool.io/) próximo ano, pediu-me que o ajudasse a refatorar um pouco seu código pois ele está mais acostumado com C/C++ e claro eu fui com a maior sede ao pote.
 
 Porém ainda estava meio nebuloso algumas coisas pois a nomenclatura que ele usou para seus parâmetros não fazia muito sentido, para mim. Então pensei:
 
@@ -81,7 +81,12 @@ Logo mais veremos o que é essa função.
 
 ## Atomic Design
 
-> Você deve se questionar se eu sou retardado mental para querer aplicar Atomic Design em Redes Neurais neh?
+> Você deve se questionar se eu sou retardado mental para querer aplicar Atomic Design em Redes Neurais, neh?!
+
+
+
+
+
 
 
 
