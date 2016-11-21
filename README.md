@@ -45,6 +45,8 @@ Porém ainda estava meio nebuloso algumas coisas pois a nomenclatura que ele uso
 ![](http://i.giphy.com/JwwYTeuOHhEB2.gif) 
 
 
+> Nesse estudo eu irei separar todas as funções para **entender CADA PARTE antes até de entender o todo**, pois a ideia é que depois de entender tod as partes eu refaça o código original sem precisar me basear nele.
+
 Nosso código para embasamento está cheio de `this`, veio do C para JS no frontend e agora irá para módulos em Node.js, por exemplo essa função:
 
 ```js
