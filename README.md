@@ -246,3 +246,117 @@ Aliás há uns 5 meses atrás fiz um modulozinho (npm) simples para isso, o [ato
 
 
 ### Fim do ADENDO
+
+
+Bom depois que aprendemos a criar as camadas com os neurônios vamos continuar analisando o código, nisso já vemos que inicia a função principal:
+
+```js
+function CNeuralNet(I) {
+    I = I || {};
+
+    $.extend(I, {
+        m_NumInputs: 0,
+        m_NumOutputs: 0,
+        m_NumHiddenLayers: 0,
+        m_NeuronsPerHiddenLyr: 0,
+        m_vecLayers: [],
+    });
+
+    $.extend(this, I);
+
+    // ...
+```
+
+> Apenas com esse pequeno pedaço de código o que você refatoraria?
+
+Vamos começar por aqui:
+
+
+```js
+function CNeuralNet(I) {
+    I = I || {};
+```
+
+Podemos facilmente refatorar para:
+
+
+```js
+function CNeuralNet(I={}) {
+```
+
+Logo após notamos algo estranho:
+
+```js
+$.extend(I, {
+    m_NumInputs: 0,
+    m_NumOutputs: 0,
+    m_NumHiddenLayers: 0,
+    m_NeuronsPerHiddenLyr: 0,
+    m_vecLayers: [],
+});
+
+$.extend(this, I);
+```
+
+**SIIIIMMMMMM!!!** Esse `$.extend` é do jQuery, não falei que esse código veio do Frontend?
+
+No código acima ele está "colocando" os dados de 1 objeto para outro, porém podemos ou não obter o mesmo resultado usando [Object.assing](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign), deixando o código assim:
+
+
+```js
+Object.assign(I, {
+    m_NumInputs: 0,
+    m_NumOutputs: 0,
+    m_NumHiddenLayers: 0,
+    m_NeuronsPerHiddenLyr: 0,
+    m_vecLayers: [],
+});
+
+Object.assign(this, I);
+```
+
+Porém eu modificaria mais uma coisa, o objeto:
+
+
+```js
+{
+  m_NumInputs: 0,
+  m_NumOutputs: 0,
+  m_NumHiddenLayers: 0,
+  m_NeuronsPerHiddenLyr: 0,
+  m_vecLayers: [],
+}
+```
+
+Para:
+
+```js
+const infos = {
+  m_NumInputs: 0,
+  m_NumOutputs: 0,
+  m_NumHiddenLayers: 0,
+  m_NeuronsPerHiddenLyr: 0,
+  m_vecLayers: [],
+}
+Object.assign(I, infos);
+
+Object.assign(this, I);
+```
+
+Agora basta unir os dois `Object.assign`s:
+
+
+```js
+const infos = {
+  m_NumInputs: 0,
+  m_NumOutputs: 0,
+  m_NumHiddenLayers: 0,
+  m_NeuronsPerHiddenLyr: 0,
+  m_vecLayers: [],
+}
+
+Object.assign(this, Object.assign(I, infos))
+```
+
+Porém eu ainda não sei se é o resultado esperado pois não executei o código original para debuga-lo, estamos indo com a cara e a coragem heheheeh.
+
