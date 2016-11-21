@@ -1,7 +1,6 @@
 # Redes Neurais
 
 
-// ESCREVER UMA INTRODUÇÃO PRA QM EH NOOB E NAO MANJA
 
 > **Qual é o computador mais FODIDO do mundo?**
 
@@ -24,7 +23,9 @@ Pois é! Isso não só é possível como já descobriu diversas coisas que os ci
 Eu poderia escrever 1 artigo apenas com as últimas descobertas feitas a partir de Redes Neurais, mas em vez disso deixarei alguns links abaixo:
 
 
-
+- [The wonderful and terrifying implications of computers that can learn - 2014](https://www.ted.com/talks/jeremy_howard_the_wonderful_and_terrifying_implications_of_computers_that_can_learn)
+- [The future of early cancer detection? - 2014](https://www.ted.com/talks/jorge_soto_the_future_of_early_cancer_detection)
+- [How computers are learning to be creative - 2016](https://www.ted.com/talks/blaise_aguera_y_arcas_how_computers_are_learning_to_be_creative)
 
 
 ## Metodologia de Estudo
