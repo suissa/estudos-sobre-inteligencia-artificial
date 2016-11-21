@@ -197,5 +197,23 @@ module.exports = (amountNeurons, amountWeight) =>
   Array.from({length: amountNeurons}, () => Neuron(amountWeight))
 ```
 
+### Hora do ADENDO
+
+Você deve ter percebido que utilizei a função `Array.from` correto? Então só explicarei rapidinho como ela funciona, vamos pelo básico:
+
+```js
+> Array.from('Suissa')
+[ 'S', 'u', 'i', 's', 's', 'a' ]
+```
+
+Logo essa função transforma uma *String* em *Array* igual à função `split`, porém ainda existe uma malandragem sapeca nela, podemos passar como objeto o tamanho desejado e de brinde ainda podemos passar uma função que gerará seus valores! Pois é...
+
+```js
+> Array.from({length: 8}, () => 0)
+[ 0, 0, 0, 0, 0, 0, 0, 0 ]
+```
+
+Aliás há uns 5 meses atrás fiz um modulozinho (npm) simples para isso, o [atomic-array](https://www.npmjs.com/package/atomic-array)
 
 
+### Fim do ADENDO
