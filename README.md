@@ -197,6 +197,19 @@ module.exports = (amountNeurons, amountWeight) =>
   Array.from({length: amountNeurons}, () => Neuron(amountWeight))
 ```
 
+Podemos ainda deixar assim:
+
+```js
+const Neuron = require('./neuron.js')
+
+module.exports = (length, amountWeight) => 
+  Array.from({length}, () => Neuron(amountWeight))
+```
+
+> Flagrou a malandragem? ;)
+
+
+
 ### Hora do ADENDO
 
 Você deve ter percebido que utilizei a função `Array.from` correto? Então só explicarei rapidinho como ela funciona, vamos pelo básico:
