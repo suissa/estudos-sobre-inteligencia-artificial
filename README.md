@@ -6,10 +6,39 @@
 > **Qual é o computador mais FODIDO do mundo?**
 
 
-![cérebrooooo]()
+![cérebrooooo](https://raw.githubusercontent.com/suissa/estudos-sobre-inteligencia-artificial/master/assets/images/brain1.jpg)
 
 
-Refatorando um código de JS, cheio de `this`, que veio do C para módulos em Node.js, por exemplo essa função:
+> **PERFEITO!** Agora imagine tentar emular ele em um computador!!!
+
+
+
+![daaannnn](http://i.giphy.com/GAgI0RcNxTOmI.gif)
+
+
+Pois é! Isso não só é possível como já descobriu diversas coisas que os cientistas ainda não conheciam, se te falarem que isso é o futuro eles estão errados.
+
+> Isso não é apenas nosso futuro como também o presente e **EU, Suissa,** tenho certeza que terá um impacto massivo na nossa vida.
+
+
+Eu poderia escrever 1 artigo apenas com as últimas descobertas feitas a partir de Redes Neurais, mas em vez disso deixarei alguns links abaixo:
+
+
+
+
+
+## Metodologia de Estudo
+
+Como vocês já devem saber que sou meio louco por isso gosto de testar formas diferentes de aprender, eu já conhecia todo o conceito sobre [Redes Neurais]() mas nunca tinha feito nada com ela muito menos programado uma. Entretanto hoje, no meu aniversário 20/11, um broder meu e que provavelmente fará um curso sobre [Machine Learning]() na [Webschool.io]() próximo ano, pediu-me que o ajudasse a refatorar um pouco seu código pois ele está mais acostumado com C/C++ e claro eu fui com a maior sede ao pote.
+
+Porém ainda estava meio nebuloso algumas coisas pois a nomenclatura que ele usou para seus parâmetros não fazia muito sentido, para mim. Então pensei:
+
+> **Bora modularizar/atomizar essa porra toda aí depois eu estudo e só monto o programa usando essas funções!**
+
+![](http://i.giphy.com/JwwYTeuOHhEB2.gif) 
+
+
+Nosso código para embasamento está cheio de `this`, veio do C para JS no frontend e agora irá para módulos em Node.js, por exemplo essa função:
 
 ```js
 this.Mutate = function(chromo)
@@ -42,16 +71,6 @@ module.exports = Mutate
 ```
 
 Logo mais veremos o que é essa função.
-
-## Metodologia de Estudo
-
-Como vocês já devem saber que sou meio louco por isso gosto de testar formas diferentes de aprender, eu já conhecia todo o conceito sobre [Redes Neurais]() mas nunca tinha feito nada com ela muito menos programado uma. Entretanto hoje, no meu aniversário 20/11, um broder meu e que provavelmente fará um curso sobre [Machine Learning]() na [Webschool.io]() próximo ano, pediu-me que o ajudasse a refatorar um pouco seu código pois ele está mais acostumado com C/C++ e claro eu fui com a maior sede ao pote.
-
-Porém ainda estava meio nebuloso algumas coisas pois a nomenclatura que ele usou para seus parâmetros não fazia muito sentido, para mim. Então pensei:
-
-> **Bora modularizar/atomizar essa porra toda aí depois eu estudo e só monto o programa usando essas funções!**
-
-![](http://i.giphy.com/JwwYTeuOHhEB2.gif) 
 
 ## Atomic Design
 
