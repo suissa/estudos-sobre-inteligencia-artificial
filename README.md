@@ -47,7 +47,9 @@ Porém ainda estava meio nebuloso algumas coisas pois a nomenclatura que ele uso
 
 > Nesse estudo eu irei separar todas as funções para **entender CADA PARTE antes até de entender o todo**, pois a ideia é que depois de entender tod as partes eu refaça o código original sem precisar me basear nele.
 
-Nosso código para embasamento está cheio de `this`, veio do C para JS no frontend e agora irá para módulos em Node.js, por exemplo essa função:
+Não irei abordar a parte matemática nesse primeiro momento, iremos estudar os conteúdos relacionados somente quando for necessário.
+
+Nosso código para embasamento está cheio de `this`, vindo do C para JS no frontend e agora irá para módulos em Node.js, por exemplo essa função:
 
 ```js
 this.Mutate = function(chromo)
@@ -73,8 +75,8 @@ Na minha mão já virou:
 const RandFloat = () => Math.random() 
 const RandomClamped = () => RandFloat() - RandFloat()
 const Mutate = (chromo) => chromo.map((e, i) => (RandFloat() < 0.3)
-                                    ? e += (RandomClamped() * 0.3)
-                                    : e)
+                                                ? e += (RandomClamped() * 0.3)
+                                                : e)
 
 module.exports = Mutate
 ```
@@ -88,7 +90,7 @@ Logo mais veremos o que é essa função.
 
 
 
-
+...
 
 
 
