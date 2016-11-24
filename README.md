@@ -167,6 +167,32 @@ OK! Agora temos como criar nossos neurônios, mas e aí eles vão para onde??
 
 ## Camadas
 
+Quando me deparei com as camadas da Rede Neural logo precisei pesquisar se no nosso cérebro também existem essas camadas e por incrível que pareça existam, mas não como implementado na programação.
+
+> As áreas neocorticais no decurso do seu período de desenvolvimento apresentam uma organização estrutural em seis camadas.
+> 
+> Córtex homogenético ou isocórtex – córtex inicial e áreas do córtex adulto que mantêm ainda as seis camadas
+> Cortex heterogenético ou alocórtex – O paleocórtex e o arquicórtex nunca apresentam estas camadas também.
+> 
+> 
+> ...
+> 
+> As células do neocórtex estão arranjadas numa série de seis camadas, mais evidentes em algumas áreas do que noutras. Estas camadas são de superficial para profunda:
+> 
+> Camada I – Camada molecular – pobre em células e com muitas fibras (células anácrinas – células horizontais de cajal);
+> 
+> Camada II – Camada granular externa – com poucas fibras e muitas células. Origem das fibras de associação curta;
+> 
+> Camada III – Camada piramidal externa – origem das fibras de associação longa, das fibras comissurais;
+> 
+> Camada IV – Camada granular interna – apresenta muitas fibras associadas a células. Contém a lâmina externa de Baillarger;
+> 
+> Camada V – Camada piramidal interna – estão presentes as células piramidais gigantes de Betz. As suas fibras projectam para estruturas subtalâmicas e corpo estriado. Contém a lâmina interna de Baillarger;
+> 
+> Camada VI – Camada multiforme ou plexiforme – origem das fibras que se projectam para o corpo estriado e suas receptoras. Grande variedade de células (como por exemplo as células de Martinotti que se estendem até à lâmina I).
+
+*fonte: [](https://pt.wikipedia.org/wiki/C%C3%B3rtex_cerebral#Organiza.C3.A7.C3.A3o_cortical)*
+
 Como existem **vários** tipos de Redes Neurais irei abordar o tipo [autoencoder](https://en.wikipedia.org/wiki/Autoencoder) que é composta de pelo menos 3 camadas:
 
 - input/entrada
@@ -247,6 +273,7 @@ Aliás há uns 5 meses atrás fiz um modulozinho (npm) simples para isso, o [ato
 
 ### Fim do ADENDO
 
+## Rede Neural
 
 Bom depois que aprendemos a criar as camadas com os neurônios vamos continuar analisando o código, nisso já vemos que inicia a função principal:
 
@@ -359,4 +386,32 @@ Object.assign(this, Object.assign(I, infos))
 ```
 
 Porém eu ainda não sei se é o resultado esperado pois não executei o código original para debuga-lo, estamos indo com a cara e a coragem heheheeh.
+
+
+Na sequência temos a função que cria a rede, recebendo 4 parâmetros onde facilmente, se estivéssemos usando `class`, poderia ser o construtor:
+
+```js
+this.CreateNet = function(iNumInputs, iNeuronsPerHiddenLayer, iNumHiddenLayers, iNumOutputs) {
+
+  this.m_NumInputs = iNumInputs;
+  this.m_NumOutputs = iNumOutputs;
+  this.m_NumHiddenLayers = iNumHiddenLayers;
+  this.m_NeuronsPerHiddenLyr = iNeuronsPerHiddenLayer;
+  
+  //create the layers of the network
+  if (this.m_NumHiddenLayers > 0) {
+    //create first hidden layer
+    this.m_vecLayers.push(new SNeuronLayer(this.m_NeuronsPerHiddenLyr, this.m_NumInputs));
+
+    for (let i = 0; i < this.m_NumHiddenLayers - 1; ++i) 
+      this.m_vecLayers.push(new SNeuronLayer(this.m_NeuronsPerHiddenLyr, this.m_NeuronsPerHiddenLyr));
+    
+    //create output layer
+    this.m_vecLayers.push(new SNeuronLayer(this.m_NumOutputs, this.m_NeuronsPerHiddenLyr));
+  }
+  else 
+    //create output layer
+    this.m_vecLayers.push(new SNeuronLayer(this.m_NumOutputs, this.m_NumInputs));
+  
+}
 
