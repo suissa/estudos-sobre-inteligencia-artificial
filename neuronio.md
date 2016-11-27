@@ -87,14 +87,14 @@ Existem várias funções de ativação, entre as principais são:
 
 		F(sum) = ( 1 - e ^ ( b * u ) ) / ( 1 + e ^ ( b * u ) )
 		
-
----
+![Função Tangente Hiperbólica](assets/images/tangetehiperbolica_form.png)
 
 ps:
 	
 - e = [Número de euler] (https://pt.wikipedia.org/wiki/Número_de_Euler)
 - ^ = exponencial
 
+---
 
 #### Vamos por o Neurônio pra funcionar
 
