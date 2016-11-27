@@ -95,7 +95,13 @@ ps:
 - ^ = exponencial
 
 
+#### Vamos por o Neurônio pra funcionar
 
+//Todo:
+
+Escrever sobre um rede perceptron resolvendo um problema linear
+
+---
 #### Calma....
 O perceptron é bem legal, mas com ele só conseguimos fazer separações lineares, o que nos leva a pensar no problema do exclusivo ou popularmente conhecido na nossa área como XOR.
 
