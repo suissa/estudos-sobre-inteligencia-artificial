@@ -85,6 +85,7 @@ Existem várias funções de ativação, entre as principais são:
 
 	Onde:
 
+		F(sum) = ( 1 - e ^ ( b * u ) ) / ( 1 + e ^ ( b * u ) )
 		
 
 ---
