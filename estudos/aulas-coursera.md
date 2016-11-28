@@ -46,5 +46,4 @@ Clustering: Take a collection of 1,000,000 different genes, and find a way to au
 
 Non-clustering: The "Cocktail Party Algorithm", allows you to find structure in a chaotic environment. (i.e. identifying individual voices and music from a mesh of sounds at a cocktail party).
 
-![](
-![](https://raw.githubusercontent.com/suissa/estudos-sobre-inteligencia-artificial/master/assets/images/hipo.png))
+![](https://raw.githubusercontent.com/suissa/estudos-sobre-inteligencia-artificial/master/assets/images/hipo.png)
