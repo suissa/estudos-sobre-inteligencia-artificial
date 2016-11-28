@@ -27,4 +27,6 @@ Acredito que para atingir esse objetivo devo seguir os seguintes passos:
 
 ## Metodologia
 
-Para conseguir uma pletora de dados irei criar um sistema web como captação desses dados, porém de uma forma simples. Qualquer pessoa poderá colaborar ajudando a inserir algum dado sobre as moléculas. Os dados iniciais dos átomos será gerado por mim, fazendo alguns crawlers marotos.  
+Para conseguir uma pletora de dados irei criar um sistema web como captação desses dados, porém de uma forma simples. Qualquer pessoa poderá colaborar ajudando a inserir algum dado sobre as moléculas. Os dados iniciais dos átomos serão gerado por mim, fazendo alguns crawlers marotos.  
+
+Depois precisarei criar um script para tratar esses dados, para que seja possível treinar a rede.
