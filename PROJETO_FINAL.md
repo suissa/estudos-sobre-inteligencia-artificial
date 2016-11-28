@@ -31,4 +31,4 @@ Para conseguir uma pletora de dados irei criar um sistema web como captação de
 
 Depois precisarei criar um script para tratar esses dados, para que seja possível treinar a rede.
 
-Com o pouco que sei acredito que inicialmente usarei um treinamento supervisionado para a classificação dos átomos
+Com o pouco que sei, acredito que inicialmente usarei um treinamento supervisionado para a classificação dos átomos e também das moléculas, para depois uar regressão para que ela possa simular as moléculas.
