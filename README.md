@@ -33,6 +33,19 @@ Eu poderia escrever 1 artigo apenas com as últimas descobertas feitas a partir 
 - [The future of early cancer detection? - 2014](https://www.ted.com/talks/jorge_soto_the_future_of_early_cancer_detection)
 - [How computers are learning to be creative - 2016](https://www.ted.com/talks/blaise_aguera_y_arcas_how_computers_are_learning_to_be_creative)
 
+## O Cérebro
+
+Creio que antes de entrar nesse assunto devo entender um pouco da estrutura do cérebro já que as Redes Neurais tendem a *"imita-lo"*, então vamos à Wikipedia:
+
+> O cérebro é composto de duas grandes classes de células, neurônios e células das glia. Neurônios recebem mais atenção, mas, na verdade, as células gliais são mais frequentes, formando uma proporção de pelo menos 10 para 1. Existem diversos tipos de células gliais, que realizam um grande número de funções importantes como: suporte estrutural, suporte metabólico, isolamento, e guia para o desenvolvimento.
+
+Bom sabemos que as Redes Neurais são baseadas nos neurônios, mas acredito que mais para frente ainda acharemos um lugar para as células da glia. :p
+
+Olhe que interessante:
+
+> As principais funções das células da glia são cercar os neurônios e mantê-los no seu lugar, fornecer nutrientes e oxigênio para os neurônios, isolar um neurônio do outro, destruir patógenos e remover neurônios mortos.
+
+Veremos mais para frente se achamos um uso para ela.
 
 ## Metodologia de Estudo
 
@@ -412,6 +425,92 @@ this.CreateNet = function(iNumInputs, iNeuronsPerHiddenLayer, iNumHiddenLayers, 
   else 
     //create output layer
     this.m_vecLayers.push(new SNeuronLayer(this.m_NumOutputs, this.m_NumInputs));
-  
 }
+```
+
+Analisando a função acima percebemos que se ela tiver 1 ou mais camadas ocultas iremos criar essas camadas de neurônios, se não tiver camadas ocultas ela irá criar a camada de saída. 
+
+Refatorando podemos modulariza-la dessa forma:
+
+```js
+const neuronLayer = require('./neuronLayer')
+
+const createNet = (numInputs, neuronsPerHiddenLayer, numHiddenLayers, numOutputs) => {
+
+  let arrLayers = []
+  if (amountHiddenLayers) {
+    arrLayers.push(neuronLayer(neuronsPerHiddenLayer, numInputs))
+
+    for (let i = 0; i < iNumHiddenLayers - 1; ++i) 
+      arrLayers.push(neuronLayer(neuronsPerHiddenLayer, neuronsPerHiddenLayer))
+
+    arrLayers.push(neuronLayer(numOutputs, neuronsPerHiddenLayer))
+  }
+  else 
+    arrLayers.push(neuronLayer(numOutputs, numInputs))
+}
+
+module.exports = createNet
+```
+
+Ainda não entendi o porquê criamos camadas onde o neurônio possui a mesma quantidade de pesos que a quantidade de neurônios dessa camada.
+
+**PESQUISAR SOBRE**
+
+Logo abaixo achamos uma função que fala por si só:
+
+```js
+this.GetWeights = function() {
+  //this will hold the weights
+  weights = [];
+
+  //for each layer
+  for (let i = 0; i < this.m_NumHiddenLayers + 1; ++i)
+    //for each neuron
+    for (let j = 0; j < this.m_vecLayers[i].m_NumNeurons; ++j)
+      //for each weight
+      for (let k = 0; k < this.m_vecLayers[i].m_vecNeurons[j].m_NumInputs;++k)
+        weights.push(this.m_vecLayers[i].m_vecNeurons[j].m_vecWeight[k]);
+
+  return weights;
+}
+```
+
+Só pelo nome dela sabemos que ela deve retornar um *Array* com os pesos de cada neurônio de todas as camadas ocultas, sua refatoraçao é bem simples:
+
+```js
+const getWeights = (numHiddenLayers, vecLayers) => {
+  weights = []
+
+  //for each layer
+  for (let i = 0; i < numHiddenLayers + 1; ++i)
+    //for each neuron
+    for (let j = 0; j < vecLayers[i].numNeurons; ++j)
+      //for each weight
+      for (let k = 0; k < vecLayers[i].vecNeurons[j].numInputs; ++k)
+        weights.push(vecLayers[i].vecNeurons[j].m_vecWeight[k])
+
+  return weights
+}
+module.exports = getWeights
+```
+
+E olha só que suave na nave a próxima função, só pelo nome já podemos inferir que ela irá definir o peso para cada neurônio:
+
+```js
+this.PutWeights = function(weights) {
+  cWeight = 0;
+  //for each layer
+  for (let i = 0; i < this.m_NumHiddenLayers + 1; ++i) 
+    //for each neuron
+    for (let j = 0; j < this.m_vecLayers[i].m_NumNeurons; ++j) 
+      //for each weight
+      for (let k = 0; k < this.m_vecLayers[i].m_vecNeurons[j].m_NumInputs; ++k) 
+        this.m_vecLayers[i].m_vecNeurons[j].m_vecWeight[k] = weights[cWeight++];
+  
+  return;
+}
+```
+
+
 
