@@ -21,4 +21,7 @@ Acredito que para atingir esse objetivo devo seguir os seguintes passos:
 - inserir muitos dados de moléculas
 - treinar a rede para entender porque esses átomos se agrupam
   - entender quais átomos tem mais afinidade 
+  - entender os tipos de ligações
+- perguntar se X e Y formam uma molécula
+- simular uma molécula que não conheça
 
