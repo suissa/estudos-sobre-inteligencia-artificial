@@ -11,3 +11,14 @@ Como minha [mulher]() é professora e química, ela que me fez entender um pouco
 Minha ideia é que treinemos a Rede Neral para ela entender as classificações dos átomos ou moléculas e quem sabe futuramente poder simular reações químicas.
 
 > Não sei se isso é fácil ou difícil, quero fazer.
+
+## Roteiro
+
+Acredito que para atingir esse objetivo devo seguir os seguintes passos:
+
+- inserir todos os dados necessários para todos os átomos
+- treinar a rede para entender a classificação átomos
+- inserir muitos dados de moléculas
+- treinar a rede para entender porque esses átomos se agrupam
+  - entender quais átomos tem mais afinidade 
+
