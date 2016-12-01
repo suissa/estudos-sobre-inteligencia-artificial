@@ -27,8 +27,8 @@ Acredito que para atingir esse objetivo devo seguir os seguintes passos:
 
 ## Metodologia
 
-Para conseguir uma pletora de dados irei criar um sistema web como captação desses dados, porém de uma forma simples. Qualquer pessoa poderá colaborar ajudando a inserir algum dado sobre as moléculas. Os dados iniciais dos átomos serão gerado por mim, fazendo alguns crawlers marotos.  
+Para conseguir uma pletora de dados irei criar um sistema web, bem simples, para a captação desses dados onde qualquer pessoa poderá colaborar ajudando a inserir algum dado sobre as moléculas. Os dados iniciais dos átomos serão gerados por mim, fazendo alguns *crawlers* marotos.  
 
-Depois precisarei criar um script para tratar esses dados, para que seja possível treinar a rede.
+Depois precisarei criar um script para tratar esses dados para que seja possível treinar a rede.
 
-Com o pouco que sei, acredito que inicialmente usarei um treinamento supervisionado para a classificação dos átomos e também das moléculas, para depois uar regressão para que ela possa simular as moléculas.
+Com o pouco que sei, acredito que inicialmente usarei um treinamento supervisionado para a classificação dos átomos e também das moléculas, depois usar regressão para que ela possa simular as moléculas.
