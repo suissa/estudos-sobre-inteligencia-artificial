@@ -6,7 +6,7 @@ Para ter uma ótima fonte atual, eu me inscrevi no curso de [Machine Learning](h
 
 ## Objetivo
 
-Como minha [mulher](https://github.com/fpchemical/) é professora e química, ela me fez entender um pouco dessa matéria que odiava, nós já tinhamos a ideia de usar Machine Learning para fazer um sistema web e colaborativo para análise de moléculas.
+Como minha [mulher](https://github.com/fpchemical/) é professora e química, ela me fez entender um pouco dessa matéria que eu odiava, durante nossos estudos cogitamos a ideia de usar Machine Learning para fazer um sistema web e colaborativo para análise de moléculas.
 
 Minha ideia é que treinemos a Rede Neral para ela entender as classificações dos átomos ou moléculas e quem sabe futuramente poder simular reações químicas.
 
