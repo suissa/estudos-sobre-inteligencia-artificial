@@ -1,8 +1,8 @@
 # Projeto Final
 
-Como eu acredito que aprendemos melhor tendo um objetivo final(meta), pois isso nos da um limite que sabemos ser alcançavel, além de nos ajudar a criar um roteiro de estudo.
+Eu acredito que aprendemos melhor tendo um objetivo final, uma meta, isso nos da um limite que sabemos ser alcançável e nos ajuda a criar um roteiro de estudos.
 
-Para ter uma ótima fonte atual eu me inscrive no curso de [Machine Learning](https://www.coursera.org/learn/machine-learning/) da Coursera e obviamente repassarei o conteúdo por aqui.
+Para ter uma ótima fonte atual, eu me inscrevi no curso de [Machine Learning](https://www.coursera.org/learn/machine-learning/) da Coursera e obviamente repassarei o conteúdo por aqui.
 
 ## Objetivo
 
